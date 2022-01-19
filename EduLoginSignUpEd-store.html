@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/EduLoginSignUp.css">
+    <title>ED-STORE | LOGIN AND SIGNUP</title>
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <span class="tab" id="signUpTab">
+                <p>Sign Up</p>
+            </span>
+            <span class="tab logIn-unselected" id="logInTab">
+                <p>Log In</p>
+            </span>
+        </div>
+        
+        <div class="form-container">
+            <div id="error"></div>
+            <form id="logInForm">
+                <div class="mb-3">
+                    <label for="logInEmail" class="logIn">Email address</label>
+                    <input type="email" class="form-control" id="logInEmail">
+                </div>
+                <div class="mb-3">
+                    <label for="logInPassword" class="logIn">Password</label>
+                    <input type="password" class="form-control" id="logInPassword">
+                </div>
+                <button type="submit" class="btn btn-primary" id='logInSubmit'>LogIn</button>
+            </form>
+            
+            <form id="signUpForm">
+                <div class="mb-3">
+                    <label for="signUpName" class="logInText">Name</label>
+                    <input type="text" class="form-control logInInput" id="signUpName">
+                </div>
+                <div class="mb-3">
+                    <label for="signUpEmail" class="logInText">Email address</label>
+                    <input type="email" class="form-control logInInput" id="signUpEmail">
+                </div>
+                <div class="mb-3">
+                    <label for="signUpPassword" class="logInText">Password</label>
+                    <input type="password" class="form-control logInInput" id="signUpPassword">
+                </div>
+                <div class="mb-3">
+                    <label for="signUpPhone" class="logInText">Phone No.</label>
+                    <input type="text" class="form-control logInInput" id="signUpPhone">
+                </div>
+                <div class="mb-3">
+                    <label for="signUpIncome" class="logInText">Income Certificate</label>
+                    <input type="file" class="form-control logInInput" id="signUpIncome">
+                </div>
+                <button type="submit" class="btn btn-primary" id='signUpSubmit'>SignUp</button>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="./js/EduLoginSignUp.js"></script>
+</html>

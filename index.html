@@ -1,0 +1,142 @@
+<!DOCTYPE>
+<HTML>
+<HEAD>
+	<META CHARSET= "UTF-8">
+	<META NAME = "VIEWPORT" CONTENT ="WIDTH=DEVICE-WIDTH, INITIAL-SCALE=1.0">
+	<LINK REL = "STYLESHEET" HREF = "./css/index.CSS">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<TITLE>ED-WISER | Home</TITLE>
+</HEAD>
+<BODY>
+      
+       <NAV CLASS="BG  NAVBAR RESP-HEIGHT-NAV" id='nav'>
+            <UL CLASS="NAV-LIST V-CLASS-RESP">
+	         <IMG SRC="./img/LOGO.jpg" ALT="LOGO" CLASS="LOGO">
+	         <LI><A HREF = "#HOME">HOME</A></LI>
+	         <LI><A HREF = "#ABOUT">ABOUT US</A></LI>
+		 <LI><A HREF = "#SERVICES">SERVICES</A></LI>
+		 <LI><A HREF = "#CONTACT">CONTACT US</A></LI>
+            </UL>
+      
+    	 <DIV CLASS = "NAV-SEARCH V-CLASS-RESP">
+   	    <INPUT TYPE = "TEXT" NAME =" SEARCH" ID = "SEARCH">
+            <BUTTON CLASS = "BTN1">SEARCH</BUTTON>
+        </DIV>
+			<i id='BURGER' class="material-icons">menu</i>
+        </NAV>
+	
+	
+	<SECTION CLASS="FIRST-SECTION BG" id='HOME'>
+	   <DIV CLASS= "BOXMAIN">
+		<DIV CLASS="FIRST-HALF">
+		      <P CLASS="TEXT1">THE FUTURE OF EDUCATION IS HERE</P>
+		      <P CLASS="TEXT2">A COMPLETE HUB OF EDUCATION TRAINING AND RESOURCES.</P>
+		<DIV CLASS="BUTTONS">
+			<BUTTON CLASS="BTN2" ><a href='./EduLoginSignUpCourses.html'>COURSES</a></BUTTONS>
+			<BUTTON CLASS="BTN2"><a href='./EduLoginSignUpEd-store.html'>ED-STORE</a></BUTTONS>
+		</DIV>
+		</DIV>
+		<DIV CLASS ="SECOND-HALF">
+			<IMG SRC="./img/LOGO.jpg" ALT="GYM IMAGE">
+		</DIV>
+	   </DIV>
+	</SECTION>
+
+	<div id="ABOUT">
+	<SECTION CLASS= "SECRIGHT">
+		<DIV CLASS="PARAS">
+			<P CLASS="HEADING TEXT1">MAKING LEARNING EASY</P>
+			<P CLASS="MAIN TEXT2">IN THIS SLOW GOING WORLD, BOOST YOURSELF UP AND MATCH WITH THE SPEED OF TIME TO NOT LAG BEHIND.
+			EDUCATION IS THE KEY TO SUCCESS AND WE MAKE IT TRUE. GET YOURSELF REGISTERED TODAY AND BE A PART OF AN 
+   			AMAZING ENVIORNMENT WHERE KNOWLEDGE FREAKS LIKE YOU TRY THEIR BEST TO FILL YOU UP WITH ALL THEY HAVE.</P>
+		</DIV>
+		<DIV CLASS="THUMBNAIL">
+			<IMG SRC="./img/ch 3.jpg" ALT="IMAGE" CLASS="THUMBNAIL">
+		</DIV>
+	</SECTION>
+	</div>
+
+	<div id="SERVICES">
+	<SECTION CLASS= "SECLEFT">
+		<DIV CLASS="THUMBNAIL2">
+			<IMG SRC="./img/ch 2.jpg" ALT="GYM IMAGE" CLASS="THUMBNAIL2">
+		</DIV>
+		<DIV CLASS="PARAS2">
+			<P CLASS="HEADING TEXT1">REGISTER YOURSELF FOR FREE</P>
+			<P CLASS="MAIN TEXT2">"ED-WISER" PROVIDES YOU THE COMPLETE EDUCATIONAL ENVIORNMENT AND THE BEST OF THE COURSES FOR FREE, WITH INDIA'S BEST TEACHERS FROM ALL OVER COUNTRY.</P>
+			<P CLASS="MAIN TEXT2">ALL THE COURSES ARE RUN BY THE BEST OF OUR TEACHERS WITH TRUSTED MATERIAL. SO GET READY TO DIVE INTO THE KNOWLEDGE OF WISDOM AND GET YOURSELF REGISTERED TODAY.</P>
+	</SECTION>
+	
+	<SECTION CLASS= "SEC-CENTER">
+		<DIV CLASS="PARAS">
+			<P CLASS="HEADING TEXT1">ED STORE (FOR SPECIAL STUDENTS) </P>
+			<P CLASS="MAIN TEXT2">ED- WISER HAS BOUGHT YOU A SPECIAL EDUCATIONAL STORE FOR THE SPECIAL STUDENTS WHO CAN NOT AFFORD THE REGULAR STUFF.
+				"ED-STORE": A ONE STOP DESTINATION FOR ALL WHAT A STUDENT NEEDS.</P>
+				<P CLASS="MAIN TEXT2">WHAT ARE YOU WAITING FOR...."GET YOURSELF REGISTERED NOW" AND ENJOY ED-STORE</P>
+			</DIV>
+			<DIV CLASS="THUMBNAIL">
+				<IMG SRC="./img/ch 4.jpg" ALT="GYM IMAGE" CLASS="THUMBNAIL">
+				</DIV>
+			</SECTION>
+		</div>
+			
+	<SECTION CLASS = "CONTACT-US" id='CONTACT'>
+		<H1 CLASS = "TEXT-CENTER">CONTACT US</H1>
+		<FORM CLASS = "FORM">
+			<P><INPUT CLASS="FORM-INPUT" TYPE="TEXT" NAME="NAME" ID="NAME" PLACEHOLDER="ENTER YOUR NAME">
+			<P><INPUT CLASS="FORM-INPUT" TYPE="TEXT" NAME="PHONE" ID="PHONE" PLACEHOLDER="ENTER YOUR NUMBER">
+			<P><INPUT CLASS="FORM-INPUT" TYPE="EMAIL" NAME="MAIL" ID="MAIL" PLACEHOLDER="ENTER YOUR MAIL ID">
+			<P><TEXTAREA CLASS="FORM-INPUT" NAME="TEXT" ID="TEXT" COLS="30" ROWS="10" PLACEHOLDER="ENTER YOUR CONCERN"></TEXTAREA>
+			<BUTTON CLASS = "BTN3">SUBMIT</BUTTON>
+		</FORM>
+	</SECTION>
+	
+	<FOOTER CLASS="BG FOOTER">
+		<P? CLASS="FOOTER-TEXT">
+			COPYRIGHT &COPY; 2021 - ALL RIGHTS RESERVED
+		</P>
+	</FOOTER>
+</BODY>
+<script src="js/jquery.min.js"></script>
+<script>
+	$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 100);
+});
+
+window.addEventListener('resize',()=>{
+	if(window.innerWidth>=1088){
+		Array.from(document.getElementsByClassName('V-CLASS-RESP')).forEach(element => {
+			element.style.opacity = '100%';
+		});
+		Array.from(document.getElementsByClassName('NAVBAR'))[0].style.height = '10%';
+	}
+	else if(window.innerWidth<=1088){
+		Array.from(document.getElementsByClassName('V-CLASS-RESP')).forEach(element => {
+			element.style.opacity = '0%';
+		});
+		Array.from(document.getElementsByClassName('NAVBAR'))[0].style.height = '55px';
+	}
+});
+
+document.getElementById('BURGER').addEventListener('click', (e)=>{
+	if(e.target.classList == 'material-icons'){
+		e.target.classList.add('clicked');
+		Array.from(document.getElementsByClassName('V-CLASS-RESP')).forEach(element => {
+			element.style.opacity = '100%';
+		});
+		document.getElementById('nav').style.height = '36%';
+	}
+	else{
+		e.target.classList.remove('clicked');
+		Array.from(document.getElementsByClassName('V-CLASS-RESP')).forEach(element => {
+			element.style.opacity = '0%';
+		});
+		document.getElementById('nav').style.height = '55px';
+	}
+});
+</script>
+</HTML>
